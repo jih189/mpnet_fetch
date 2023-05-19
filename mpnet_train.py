@@ -79,9 +79,9 @@ if __name__ == "__main__":
 
     parser.add_argument('--log_dir', type=str, default='./paths/')
 
-    parser.add_argument('--batch_size', type=int, default=50)
+    parser.add_argument('--batch_size', type=int, default=100)
     parser.add_argument('--learning_rate', type=float, default=0.001)
-    parser.add_argument('--num_epochs', type=int, default=3)
+    parser.add_argument('--num_epochs', type=int, default=500)
 
     parser.add_argument('--enc_input_size', type=int, default=6000)
     parser.add_argument('--enc_output_size', type=int, default=60)
@@ -144,3 +144,4 @@ if __name__ == "__main__":
 
         writer.add_scalar('Loss/train', train_avg_loss, epoch_i)
         writer.add_scalar('Loss/val', val_avg_loss, epoch_i)
+        writer.flush()
