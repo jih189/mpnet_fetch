@@ -27,8 +27,9 @@ if __name__ == "__main__":
     mlp.load_state_dict(checkpoint['mlp_state'])
     encoder.load_state_dict(checkpoint['encoder_state'])
 
-    mlp.eval()
-    encoder.eval()
+    # if eval mode is set, then the model will be deterministic
+    #mlp.eval()
+    #encoder.eval()
 
     encoder_example = torch.rand(1, args.enc_input_size)
     mlp_example = torch.rand(1, args.mlp_output_size + args.mlp_output_size + args.enc_output_size)
