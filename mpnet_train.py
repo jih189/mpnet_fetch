@@ -79,8 +79,8 @@ if __name__ == "__main__":
 
     parser.add_argument('--log_dir', type=str, default='./paths/')
 
-    parser.add_argument('--batch_size', type=int, default=100)
-    parser.add_argument('--learning_rate', type=float, default=0.001)
+    parser.add_argument('--batch_size', type=int, default=1000)
+    parser.add_argument('--learning_rate', type=float, default=0.0002)
     parser.add_argument('--num_epochs', type=int, default=500)
 
     parser.add_argument('--enc_input_size', type=int, default=6000)
